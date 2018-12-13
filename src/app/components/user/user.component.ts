@@ -8,18 +8,18 @@ import { Component } from "@angular/core";
 export class UserComponent {
   //properties
   firstName = "Shridatta";
-  LastName = "Zanjare";
+  lastName = "Zanjare";
   age = 25;
+  address = {
+    street: "153 Beacon Avenue",
+    city: "Jersey city",
+    State: "NJ"
+  };
 
   //methods
   nextYear() {
-    this.age += 1;
+    return this.age + 1;
   }
 
-  constructor() {
-    console.log("constructor ran ");
-    console.log("age now " + this.age);
-    this.nextYear();
-    console.log("age next september " + this.age);
-  }
+  constructor() {}
 }
