@@ -1,25 +1,27 @@
 import { Component } from "@angular/core";
 
+import { User } from "./models/User";
+
 @Component({
   selector: "app-user",
   templateUrl: "./user.component.html",
   styleUrls: ["./user.component.css"]
 })
 export class UserComponent {
-  //properties
-  firstName = "Shridatta";
-  lastName = "Zanjare";
-  age = 25;
-  address = {
-    street: "153 Beacon Avenue",
-    city: "Jersey city",
-    State: "NJ"
-  };
+  // Properties
+  user: User;
 
-  //methods
-  nextYear() {
-    return this.age + 1;
+  // Methods
+  constructor() {
+    this.user = {
+      firstName: "Shridatta",
+      lastName: "Zamjare",
+      age: 30,
+      address: {
+        street: "153 beacon avenue",
+        city: "Jersey City",
+        state: "NJ"
+      }
+    };
   }
-
-  constructor() {}
 }
